@@ -13,7 +13,7 @@
 				"content.js"
 			],
 			"matches": [
-				"https://www.youtube.com/shorts/*"
+				"https://www.youtube.com/*"
 			]
 		}
 	]
