@@ -35,10 +35,6 @@ const hook = () => {
 			continue;
 		}
 
-		if ($._data(volumeControl, "events")) {
-			continue;
-		}
-
 		const $slider = $(
 			`<input
 				type="range"
