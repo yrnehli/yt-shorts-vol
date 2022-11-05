@@ -1,4 +1,4 @@
-let _volume = 25;
+let _volume = 5;
 
 window.addEventListener('load', () => {   
 	hook();
