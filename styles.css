@@ -1,0 +1,50 @@
+.yt-shorts-vol-ext {
+	top: 0.5rem;
+	position: absolute;
+	right: 0.25rem;
+}
+
+.yt-shorts-vol-ext-parent {
+	top: 3px; 
+	right: 0px;
+}
+
+.yt-shorts-vol-ext svg {
+	left: -85px;
+	position: absolute;
+	color: white;
+}
+
+.yt-shorts-vol-ext input[type=range] {
+	width: 60px;
+	-webkit-appearance: none;
+}
+
+
+.yt-shorts-vol-ext input[type=range]::-webkit-slider-runnable-track {
+    width: 60px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+	cursor: pointer;
+}
+
+.yt-shorts-vol-ext input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: -5px;
+	cursor: pointer;
+}
+
+.yt-shorts-vol-ext input[type=range]:focus {
+    outline: none;
+}
+
+.yt-shorts-vol-ext input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #fff;
+}

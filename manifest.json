@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "YouTube Shorts Volume",
+	"version": "0.0.1",
+	"description": "Add a volume slider when watching YouTube shorts",
+	"content_scripts": [
+		{
+			"css": [
+				"styles.css"
+			],
+			"js": [
+				"jquery-3.6.1.min.js",
+				"content.js"
+			],
+			"matches": [
+				"https://www.youtube.com/shorts/*"
+			]
+		}
+	]
+}
