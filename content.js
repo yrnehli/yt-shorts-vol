@@ -1,4 +1,10 @@
-let _volume = 5;
+let _volume;
+
+try {
+	_volume = JSON.parse(JSON.parse(localStorage.getItem("yt-player-volume")).data).volume
+} catch (e) {
+	_volume = 5;
+}
 
 window.addEventListener('load', () => {   
 	hook();
@@ -10,6 +16,10 @@ window.addEventListener('load', () => {
 });
 
 const hook = () => {
+	if (!window.location.href.includes("shorts")) {
+		return;
+	}
+
 	const volumeIcons = document.querySelectorAll('[d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"');
 
 	for (const volumeIcon of volumeIcons) {
@@ -60,6 +70,7 @@ const hook = () => {
 }
 
 const changeVolume = (volume) => {
+	const time = new Date().getTime();
 	const videos = document.getElementsByClassName("video-stream");
 
 	for (const video of videos) {
@@ -68,5 +79,14 @@ const changeVolume = (volume) => {
 
 	$("input[type='range'].yt-shorts-vol-ext").val(volume);
 
-	_volume = volume; 
+	_volume = volume;
+
+	localStorage.setItem(
+		'yt-player-volume',
+		JSON.stringify({
+			data: JSON.stringify({ volume: volume, muted: false }),
+			creation: time,
+			expiration: time + 2592000000
+		})
+	)
 }
