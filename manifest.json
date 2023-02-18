@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "YouTube Shorts Volume",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Add a volume slider when watching YouTube shorts",
 	"content_scripts": [
 		{
