@@ -54,7 +54,6 @@ const hook = () => {
 		$volumeControl.click(() => false);
 		$volumeControl.find('yt-icon').remove();
 		$volumeControl.parent().find('yt-interaction').remove();
-		console.log($volumeControl.parents(".player-container"));
 		$volumeControl.parents(".player-container").prepend($volumeSlider);
 	}
 
